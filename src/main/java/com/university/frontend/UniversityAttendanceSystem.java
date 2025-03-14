@@ -36,12 +36,8 @@ public class UniversityAttendanceSystem {
 
             {
                 try {
-                    backgroundImage = ImageIO
-                            .read(UniversityAttendanceSystem.class.getResource("/images/background.jpg")); // Replace
-                                                                                                           // with your
-                                                                                                           // image path
+                    backgroundImage = ImageIO.read(new File("background.jpg")); // Replace with your image path
                 } catch (IOException e) {
-
                     e.printStackTrace();
                 }
             }
@@ -125,8 +121,7 @@ public class UniversityAttendanceSystem {
 
             {
                 try {
-                    backgroundImage = ImageIO
-                            .read(UniversityAttendanceSystem.class.getResource("/images/background.jpg"));
+                    backgroundImage = ImageIO.read(new File("background.jpg"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -168,7 +163,7 @@ public class UniversityAttendanceSystem {
         // Add logo
         JLabel logo = new JLabel();
         try {
-            BufferedImage image = ImageIO.read(UniversityAttendanceSystem.class.getResource("/images/UMaT logo.jpg"));
+            BufferedImage image = ImageIO.read(new File("UMaT logo.jpg"));
             Image scaledImage = image.getScaledInstance(80, 80, Image.SCALE_SMOOTH);
             logo.setIcon(new ImageIcon(scaledImage));
         } catch (IOException e) {
